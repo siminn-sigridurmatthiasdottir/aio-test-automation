@@ -1,0 +1,215 @@
+{
+  "title": "STB Remote - Basic Functionality Test",
+  "folderHierarchy": ["VSB E2E", "STB", "Remote"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB is powered on and on Home screen. Remote is paired and responsive. CEC state is known before testing TV input selection. Playable content is available for playback control testing.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Press Home button",
+      "data": "",
+      "expectedResult": "Home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press directional buttons repeatedly",
+      "data": "UP, DOWN, LEFT, RIGHT",
+      "expectedResult": "System responds without noticeable delay or missed inputs"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press LEFT on directional pad",
+      "data": "",
+      "expectedResult": "Hamburger menu opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press RIGHT on directional pad",
+      "data": "",
+      "expectedResult": "Focus returns to main content area"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press UP on directional pad",
+      "data": "",
+      "expectedResult": "Focus moves up"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press DOWN on directional pad",
+      "data": "",
+      "expectedResult": "Focus moves down"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press OK button",
+      "data": "",
+      "expectedResult": "Focused item is selected"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Back button",
+      "data": "",
+      "expectedResult": "Previous screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Menu button",
+      "data": "",
+      "expectedResult": "Context menu or available options for the current screen are displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Go to TV button",
+      "data": "Bottom-left TV/screen icon button",
+      "expectedResult": "Live TV opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Revert button",
+      "data": "Bottom-right circular arrow button",
+      "expectedResult": "User returns to previous app, screen or previously active context"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press TV button",
+      "data": "CEC disabled",
+      "expectedResult": "TV input selection opens so HDMI input can be changed without using the TV remote"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Sound settings button",
+      "data": "Middle vertical-bars button below Home",
+      "expectedResult": "Sound settings open"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Netflix button",
+      "data": "",
+      "expectedResult": "Netflix app launches"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Home button",
+      "data": "",
+      "expectedResult": "User returns to Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Prime Video button",
+      "data": "",
+      "expectedResult": "Prime Video app launches"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Home button",
+      "data": "",
+      "expectedResult": "User returns to Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Premium button",
+      "data": "",
+      "expectedResult": "Premium section opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Home button",
+      "data": "",
+      "expectedResult": "User returns to Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press HBO Max button",
+      "data": "",
+      "expectedResult": "HBO Max app launches or app availability message is shown"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Home button",
+      "data": "",
+      "expectedResult": "User returns to Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Search button",
+      "data": "",
+      "expectedResult": "Search opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Back button",
+      "data": "",
+      "expectedResult": "User exits search and returns to previous screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Heart button on Home screen",
+      "data": "",
+      "expectedResult": "Minn listi opens or favorites view is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Navigate to content and press Heart button",
+      "data": "",
+      "expectedResult": "Focused content is added to or removed from favorites"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start playable content",
+      "data": "",
+      "expectedResult": "Playback starts"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Play/Pause button",
+      "data": "",
+      "expectedResult": "Playback pauses or resumes"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Rewind button",
+      "data": "",
+      "expectedResult": "Playback position moves backward"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Fast Forward button",
+      "data": "",
+      "expectedResult": "Playback position moves forward"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Volume Up",
+      "data": "",
+      "expectedResult": "Volume increases and volume indicator is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Volume Down",
+      "data": "",
+      "expectedResult": "Volume decreases and volume indicator is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Mute button",
+      "data": "",
+      "expectedResult": "Audio is muted or unmuted and mute indicator is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Microphone button",
+      "data": "Voice control is not currently supported",
+      "expectedResult": "No unsupported crash occurs and user remains in a valid state"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Power button",
+      "data": "",
+      "expectedResult": "STB enters standby or performs expected configured power action"
+    }
+  ]
+}

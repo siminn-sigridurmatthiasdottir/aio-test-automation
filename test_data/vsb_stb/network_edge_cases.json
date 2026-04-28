@@ -1,0 +1,167 @@
+{
+  "title": "VSB STB - Network Edge Cases",
+  "folderHierarchy": ["VSB E2E", "STB", "Network"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. User is logged into the Sjónvarp Símans experience. Remote is paired and responsive. STB is connected to the internet. Test environment allows network interruption and restoration via Wi-Fi, Ethernet, router, access point or network control tool. Live TV and VOD playback content are available.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience is displayed",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed and content rails load successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Disconnect internet connection while on Home screen",
+      "data": "Disable Wi-Fi, unplug Ethernet, disable router/AP connection, or use the configured network control method for the test environment",
+      "expectedResult": "STB remains stable and shows an expected offline, loading or connection error state without crashing"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Navigate on Home screen while internet is disconnected",
+      "data": "",
+      "expectedResult": "UI remains responsive and does not freeze or crash"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Restore internet connection",
+      "data": "Restore the same network path used before interruption",
+      "expectedResult": "STB reconnects to the internet"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Home screen recovers after internet is restored",
+      "data": "",
+      "expectedResult": "Content rails reload successfully and the Sjónvarp Símans home experience is usable"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start live TV playback",
+      "data": "",
+      "expectedResult": "Live TV playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Disconnect internet connection during live TV playback",
+      "data": "Disable Wi-Fi, unplug Ethernet, disable router/AP connection, or use the configured network control method for the test environment",
+      "expectedResult": "Playback stops, buffers, or shows an expected connection error without app or STB crash"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Attempt basic remote navigation during live TV network loss",
+      "data": "Use BACK, HOME, DOWN or OK depending on the visible state",
+      "expectedResult": "Remote input is accepted and UI remains responsive"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Restore internet connection during live TV recovery state",
+      "data": "",
+      "expectedResult": "STB reconnects to the internet"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify live TV playback recovery",
+      "data": "",
+      "expectedResult": "Live TV playback resumes automatically or can be restarted successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home screen",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start VOD playback",
+      "data": "",
+      "expectedResult": "VOD playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Disconnect internet connection during VOD playback",
+      "data": "Disable Wi-Fi, unplug Ethernet, disable router/AP connection, or use the configured network control method for the test environment",
+      "expectedResult": "Playback stops, buffers, or shows an expected connection error without app or STB crash"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Attempt to seek during VOD network loss",
+      "data": "",
+      "expectedResult": "Seek action is blocked, fails gracefully, or shows expected loading/error behavior"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Restore internet connection during VOD recovery state",
+      "data": "",
+      "expectedResult": "STB reconnects to the internet"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify VOD playback recovery",
+      "data": "",
+      "expectedResult": "VOD playback resumes automatically or can be restarted successfully from the expected position"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home screen",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Stillingar",
+      "data": "Press LEFT arrow on remote and navigate to Stillingar",
+      "expectedResult": "Settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open network or device connection information if available",
+      "data": "",
+      "expectedResult": "Current network connection state is displayed if supported by the UI"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Disconnect internet connection while viewing network or device information",
+      "data": "",
+      "expectedResult": "Network status updates to disconnected, offline or expected unavailable state"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Restore internet connection while viewing network or device information",
+      "data": "",
+      "expectedResult": "Network status updates to connected or expected available state"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home screen",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Restart STB after network recovery",
+      "data": "Use configured restart option for the test environment",
+      "expectedResult": "STB restarts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait for STB to boot",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen or expected startup screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify internet connection after reboot",
+      "data": "",
+      "expectedResult": "STB has working internet connection after reboot"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start playback after reboot",
+      "data": "",
+      "expectedResult": "Playback starts successfully and network recovery remains stable"
+    }
+  ]
+}

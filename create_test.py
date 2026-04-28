@@ -24,7 +24,7 @@ def create_or_get_folder():
 
     data = {
         "baseFolderId": None,
-        "folderHierarchy": ["STB E2E", "Remote"]
+        "folderHierarchy": ["VSB E2E", "Remote"]
     }
 
     response = requests.put(url, headers=headers, json=data)

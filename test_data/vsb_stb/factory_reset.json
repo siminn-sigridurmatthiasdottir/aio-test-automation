@@ -1,0 +1,89 @@
+{
+  "title": "VSB STB - Factory Reset from Settings",
+  "folderHierarchy": ["VSB E2E", "STB", "Factory Reset"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. User is logged into the Sjónvarp Símans experience. Internet connection is available. Remote is paired and responsive. Test environment is ready for factory reset validation and required login data is available for onboarding after reset.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience is displayed",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Stillingar",
+      "data": "Press LEFT arrow on remote and navigate to Stillingar",
+      "expectedResult": "Settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Tækið settings",
+      "data": "",
+      "expectedResult": "Device settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Factory Reset option is visible",
+      "data": "",
+      "expectedResult": "Factory Reset option is visible in device settings"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Factory Reset option",
+      "data": "",
+      "expectedResult": "Factory reset warning or confirmation screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Cancel Factory Reset",
+      "data": "",
+      "expectedResult": "Factory reset is cancelled and user returns to device settings without data being erased"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Factory Reset option again",
+      "data": "",
+      "expectedResult": "Factory reset warning or confirmation screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Confirm Factory Reset",
+      "data": "Confirm only in a test environment where reset is allowed",
+      "expectedResult": "Factory reset starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait for STB to reset and restart",
+      "data": "",
+      "expectedResult": "STB restarts after factory reset"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify onboarding starts after factory reset",
+      "data": "",
+      "expectedResult": "First onboarding screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify previous user session is removed",
+      "data": "",
+      "expectedResult": "User is no longer logged in and login/onboarding is required"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Pair remote if required after factory reset",
+      "data": "Hold 7 and 9 at the same time for three seconds if remote pairing screen is shown",
+      "expectedResult": "Remote pairs successfully or remains paired if pairing is not required"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Continue onboarding until internet setup or login screen",
+      "data": "",
+      "expectedResult": "Onboarding flow continues without blocking errors"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "title": "VSB STB - Software Update Lifecycle",
+  "folderHierarchy": ["VSB E2E", "STB", "Software Update"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. User is logged into the Sjónvarp Símans experience. Internet connection is available. Remote is paired and responsive. Test environment supports checking or triggering STB or app software update behavior. Current software version is known before testing.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience is displayed",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Stillingar",
+      "data": "Press LEFT arrow on remote and navigate to Stillingar",
+      "expectedResult": "Settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Tækið settings",
+      "data": "",
+      "expectedResult": "Device settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open device information",
+      "data": "",
+      "expectedResult": "Device information is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Record current software or app version",
+      "data": "",
+      "expectedResult": "Current version information is visible and can be recorded"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Check for available software update if supported",
+      "data": "",
+      "expectedResult": "System checks for available update or displays current update state"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start software update if available",
+      "data": "Only perform when an update is available or can be triggered in the test environment",
+      "expectedResult": "Update process starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait for update download to complete",
+      "data": "",
+      "expectedResult": "Update download completes successfully or expected progress is shown"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait for update installation to complete",
+      "data": "",
+      "expectedResult": "Update installs successfully without error"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Allow STB to restart if required",
+      "data": "",
+      "expectedResult": "STB restarts automatically or prompts for restart as expected"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait for STB to boot after update",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen or expected startup screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify user session after update",
+      "data": "",
+      "expectedResult": "User remains logged in or is shown the expected login/profile screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open device information after update",
+      "data": "",
+      "expectedResult": "Device information is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify software or app version after update",
+      "data": "",
+      "expectedResult": "Version is updated when an update was installed, or remains unchanged when no update was available"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start live TV playback after update",
+      "data": "",
+      "expectedResult": "Live TV playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start VOD playback after update",
+      "data": "",
+      "expectedResult": "VOD playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify remote control after update",
+      "data": "",
+      "expectedResult": "Remote navigation works without re-pairing"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify settings are available after update",
+      "data": "",
+      "expectedResult": "Settings screen opens and expected settings are available"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "title": "VSB STB - CEC and HDMI Behavior",
+  "folderHierarchy": ["VSB E2E", "STB", "CEC and HDMI"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. User is logged into the Sjónvarp Símans experience. STB is connected to TV using HDMI. Remote is paired and responsive. TV supports HDMI CEC. CEC state is known before testing. Playable content is available.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience is displayed",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Stillingar",
+      "data": "Press LEFT arrow on remote and navigate to Stillingar",
+      "expectedResult": "Settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Tækið settings",
+      "data": "",
+      "expectedResult": "Device settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enable CEC if not already enabled",
+      "data": "",
+      "expectedResult": "CEC setting is enabled successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enable CEC standby control if not already enabled",
+      "data": "",
+      "expectedResult": "CEC standby control is enabled successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Put STB into standby using remote Power button",
+      "data": "",
+      "expectedResult": "STB enters standby and TV follows expected CEC standby behavior"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wake STB using remote Power button",
+      "data": "",
+      "expectedResult": "STB wakes successfully and HDMI signal returns to the TV"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience after wake",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen or expected resume screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press TV button on remote",
+      "data": "CEC enabled",
+      "expectedResult": "TV input or HDMI behavior follows expected CEC behavior for the test environment"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home experience",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Disable CEC",
+      "data": "Open Stillingar > Tækið if needed",
+      "expectedResult": "CEC setting is disabled successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press TV button on remote",
+      "data": "CEC disabled",
+      "expectedResult": "TV input selection opens so HDMI input can be changed without using the TV remote"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home experience",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start live TV playback",
+      "data": "",
+      "expectedResult": "Live TV playback starts successfully with audio and video"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Disconnect HDMI cable from TV or STB",
+      "data": "Perform only if safe for the test environment",
+      "expectedResult": "TV loses HDMI signal and STB remains stable"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Reconnect HDMI cable",
+      "data": "",
+      "expectedResult": "HDMI signal returns and STB output is visible again"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify playback or recover playback after HDMI reconnect",
+      "data": "",
+      "expectedResult": "Playback continues or can be restarted successfully with audio and video"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Restart STB",
+      "data": "Use configured restart option for the test environment",
+      "expectedResult": "STB restarts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify HDMI signal after reboot",
+      "data": "",
+      "expectedResult": "HDMI signal returns after reboot and startup screen or Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify audio and video after reboot",
+      "data": "",
+      "expectedResult": "Audio and video work correctly after reboot"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "title": "Sjónvarp Símans App E2E - Main Application Flow",
+  "folderHierarchy": ["VSB E2E", "Sjónvarp Símans App"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. Internet connection is available. User is logged into the Sjónvarp Símans experience and is on the profile selection screen or Home screen.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Select user profile if profile selection screen is shown",
+      "data": "",
+      "expectedResult": "User enters Home interface"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Home screen",
+      "data": "",
+      "expectedResult": "Home screen loads and hero banner is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Scroll hero banner",
+      "data": "",
+      "expectedResult": "Focus moves correctly and banners change"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Skoða nánar on banner",
+      "data": "",
+      "expectedResult": "Content detail page opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Browse episodes, seasons, actors and related content",
+      "data": "",
+      "expectedResult": "All sections load correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start episode playback",
+      "data": "",
+      "expectedResult": "Pre-roll advertisement appears if configured for the selected content"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait until ad skip is available",
+      "data": "",
+      "expectedResult": "Skip option becomes visible if ad is skippable"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Skip advertisement or wait until advertisement finishes",
+      "data": "",
+      "expectedResult": "Content playback begins"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press DOWN on remote during playback",
+      "data": "",
+      "expectedResult": "Playback timeline overlay appears"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Seek forward and backward",
+      "data": "",
+      "expectedResult": "Playback position updates correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open playback options during content playback",
+      "data": "",
+      "expectedResult": "Playback options such as subtitles or audio are available if supported by content"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Pause",
+      "data": "",
+      "expectedResult": "Playback pauses"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait during pause",
+      "data": "",
+      "expectedResult": "Pause advertisement appears if configured"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Play",
+      "data": "",
+      "expectedResult": "Pause ad disappears if shown and playback resumes"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Exit playback",
+      "data": "",
+      "expectedResult": "User returns to Home screen or content detail page"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Home screen",
+      "data": "",
+      "expectedResult": "Home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Premium",
+      "data": "",
+      "expectedResult": "Premium catalogue opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Check Haltu áfram að horfa",
+      "data": "",
+      "expectedResult": "Previously watched content appears"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Allar þáttaröðir",
+      "data": "",
+      "expectedResult": "Series catalogue loads"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open series and select Bæta í minn lista",
+      "data": "",
+      "expectedResult": "Series is added successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Repeat for three series",
+      "data": "",
+      "expectedResult": "All selected series are saved"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Navigate to Kvikmyndir",
+      "data": "",
+      "expectedResult": "Movie catalogue loads"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Add two movies to Minn listi",
+      "data": "",
+      "expectedResult": "Movies are saved successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Minn listi",
+      "data": "",
+      "expectedResult": "Added series and movies are visible in Minn listi"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Apply filter Gaman",
+      "data": "",
+      "expectedResult": "Filtered results appear"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Apply filter Hasar",
+      "data": "",
+      "expectedResult": "Results update accordingly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return Home",
+      "data": "",
+      "expectedResult": "Home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Á dagskrá núna",
+      "data": "",
+      "expectedResult": "Live channel begins playing"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press DOWN on remote",
+      "data": "",
+      "expectedResult": "Channel list overlay appears"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select different channel",
+      "data": "",
+      "expectedResult": "Selected channel begins playback"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Dagskrárvísir",
+      "data": "",
+      "expectedResult": "EPG grid is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select program from past schedule",
+      "data": "",
+      "expectedResult": "Program starts via Tímaflakk"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Observe pre-roll advertisement",
+      "data": "",
+      "expectedResult": "Ad plays before content if configured"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Exit playback",
+      "data": "",
+      "expectedResult": "Return to Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Bíó",
+      "data": "",
+      "expectedResult": "Rental catalogue appears"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select movie",
+      "data": "",
+      "expectedResult": "Movie detail page opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Leigja",
+      "data": "",
+      "expectedResult": "Purchase confirmation is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Confirm order",
+      "data": "",
+      "expectedResult": "Order confirmation appears"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start playback",
+      "data": "",
+      "expectedResult": "Movie begins playing"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Pause playback",
+      "data": "",
+      "expectedResult": "Playback pauses"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Seek forward/backward",
+      "data": "",
+      "expectedResult": "Playback position changes correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Exit playback",
+      "data": "",
+      "expectedResult": "User returns to Home"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Krakkar",
+      "data": "",
+      "expectedResult": "Kids section opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Þættir",
+      "data": "",
+      "expectedResult": "Kids series catalogue loads"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Browse content",
+      "data": "",
+      "expectedResult": "Content loads correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Kids menu",
+      "data": "",
+      "expectedResult": "Navigation works"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Krakkabíó",
+      "data": "",
+      "expectedResult": "Kids movies catalogue loads"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Browse movies",
+      "data": "",
+      "expectedResult": "Content is displayed correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return Home",
+      "data": "",
+      "expectedResult": "Home screen is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press LEFT arrow on remote",
+      "data": "",
+      "expectedResult": "Hamburger menu opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Navigate to Leit",
+      "data": "",
+      "expectedResult": "Search option is focused"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Leit",
+      "data": "",
+      "expectedResult": "Search screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter keyword 'the'",
+      "data": "",
+      "expectedResult": "Results list is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Review results",
+      "data": "",
+      "expectedResult": "Relevant content appears"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter different keyword",
+      "data": "",
+      "expectedResult": "Results update"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter search keyword with no expected results",
+      "data": "",
+      "expectedResult": "No results or empty state message is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select result",
+      "data": "",
+      "expectedResult": "Content detail page opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return Home",
+      "data": "",
+      "expectedResult": "Home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Handbolta pass",
+      "data": "",
+      "expectedResult": "Sports content page loads"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select future event",
+      "data": "",
+      "expectedResult": "Playback is blocked with message indicating event has not started"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Browse past matches",
+      "data": "",
+      "expectedResult": "Past events are visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select past match",
+      "data": "",
+      "expectedResult": "Playback is available similar to VOD"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Add match to favorites",
+      "data": "",
+      "expectedResult": "Item is saved successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Exit section",
+      "data": "",
+      "expectedResult": "Return to Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Útvarp",
+      "data": "",
+      "expectedResult": "Radio station list is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select station",
+      "data": "",
+      "expectedResult": "Audio playback begins"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Increase volume",
+      "data": "",
+      "expectedResult": "Volume increases"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Decrease volume",
+      "data": "",
+      "expectedResult": "Volume decreases"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Switch stations",
+      "data": "",
+      "expectedResult": "Audio switches correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return Home",
+      "data": "",
+      "expectedResult": "Home screen is displayed"
+    }
+  ]
+}

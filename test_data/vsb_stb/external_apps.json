@@ -1,0 +1,161 @@
+{
+  "title": "External Apps - App Launch and Basic Connectivity - TV STB",
+  "folderHierarchy": ["VSB E2E", "External Apps"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. Internet connection is available. User is on STB Home screen. External apps carousel is visible on Home screen. YouTube, Netflix, Prime Video and Spotify apps are available on the STB. Netflix account is available for login. Mobile phone is connected to the same network as the STB for Spotify testing.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Navigate to external apps carousel on Home screen",
+      "data": "",
+      "expectedResult": "Carousel with YouTube, Netflix, Prime Video and Spotify is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open YouTube from external apps carousel",
+      "data": "",
+      "expectedResult": "YouTube app launches successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Continue as guest",
+      "data": "",
+      "expectedResult": "YouTube home screen loads without sign-in"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start playback of free video",
+      "data": "",
+      "expectedResult": "Video playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Exit YouTube app",
+      "data": "",
+      "expectedResult": "User returns to STB Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Navigate to external apps carousel on Home screen",
+      "data": "",
+      "expectedResult": "Carousel with external apps is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Netflix from external apps carousel",
+      "data": "",
+      "expectedResult": "Netflix app launches successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify login state",
+      "data": "",
+      "expectedResult": "User is either already logged in or login screen is shown"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Sign in to Netflix account if not already logged in",
+      "data": "",
+      "expectedResult": "Netflix login succeeds"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start playback of available Netflix content",
+      "data": "",
+      "expectedResult": "Netflix content starts playing successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Exit Netflix app",
+      "data": "",
+      "expectedResult": "User returns to STB Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Navigate to external apps carousel on Home screen",
+      "data": "",
+      "expectedResult": "Carousel with external apps is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Prime Video from external apps carousel",
+      "data": "",
+      "expectedResult": "Prime Video app launches successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Browse content without logging in",
+      "data": "",
+      "expectedResult": "Prime Video content catalogue loads"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Sign in to Prime Video account if required",
+      "data": "",
+      "expectedResult": "Prime Video login succeeds"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start playback of available content",
+      "data": "",
+      "expectedResult": "Prime Video content starts playing successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Exit Prime Video app",
+      "data": "",
+      "expectedResult": "User returns to STB Home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Navigate to external apps carousel on Home screen",
+      "data": "",
+      "expectedResult": "Carousel with external apps is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Spotify from external apps carousel",
+      "data": "",
+      "expectedResult": "Spotify app launches and is visible as a playback device"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Ensure mobile phone is connected to same network as STB",
+      "data": "",
+      "expectedResult": "Phone and STB are on the same network"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Spotify on mobile phone and start playing a song",
+      "data": "",
+      "expectedResult": "Song starts playing on mobile device"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open device picker in Spotify mobile app",
+      "data": "",
+      "expectedResult": "Available playback devices are displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Siminn B&O device",
+      "data": "",
+      "expectedResult": "Playback transfers to STB device"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify playback through STB",
+      "data": "",
+      "expectedResult": "Audio plays through STB / Siminn B&O"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Exit Spotify app",
+      "data": "",
+      "expectedResult": "User returns to STB Home screen"
+    }
+  ]
+}

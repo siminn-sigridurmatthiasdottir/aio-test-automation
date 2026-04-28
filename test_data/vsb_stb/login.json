@@ -1,0 +1,119 @@
+{
+  "title": "Sjónvarp Símans App - Login",
+  "folderHierarchy": ["VSB E2E", "Sjónvarp Símans App", "Login"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. Internet connection is available. User is on the Sjónvarp Símans login screen. Valid and invalid login data is available for Rafræn skilríki, Auðkennisapp and Pörunarkóði.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans login screen is displayed",
+      "data": "",
+      "expectedResult": "Innskráning screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Rafræn skilríki",
+      "data": "",
+      "expectedResult": "Rafræn skilríki login form opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter invalid phone number",
+      "data": "",
+      "expectedResult": "Validation error is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter valid phone number but do not approve login request",
+      "data": "",
+      "expectedResult": "Login request times out or remains pending"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter valid phone number and approve login request",
+      "data": "",
+      "expectedResult": "User logs in successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press LEFT arrow on remote",
+      "data": "",
+      "expectedResult": "Hamburger menu opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Aðgangur from Stillingar",
+      "data": "",
+      "expectedResult": "Aðgangur screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Útskrá",
+      "data": "",
+      "expectedResult": "User is logged out and returned to login screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Auðkennisapp",
+      "data": "",
+      "expectedResult": "Auðkennisapp login screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter invalid kennitala",
+      "data": "",
+      "expectedResult": "Validation error is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter valid kennitala but do not approve login request",
+      "data": "",
+      "expectedResult": "Login request times out or remains pending"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter valid kennitala and approve login request",
+      "data": "",
+      "expectedResult": "User logs in successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Log out again",
+      "data": "",
+      "expectedResult": "User is returned to login screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Pörunarkóði",
+      "data": "",
+      "expectedResult": "Pairing code input screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter pairing code with too few digits",
+      "data": "",
+      "expectedResult": "Validation error is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter incorrect pairing code with valid length",
+      "data": "",
+      "expectedResult": "Error message is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter valid pairing code",
+      "data": "",
+      "expectedResult": "User logs in successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify successful login state",
+      "data": "",
+      "expectedResult": "Profile selection screen or Sjónvarp Símans home screen is displayed"
+    }
+  ]
+}

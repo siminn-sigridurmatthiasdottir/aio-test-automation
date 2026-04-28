@@ -1,0 +1,119 @@
+{
+  "title": "STB E2E - Full onboarding after factory reset",
+  "folderHierarchy": ["VSB E2E", "Onboarding"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB has been factory reset. Remote has working batteries. TV is connected via HDMI. Internet is available via Ethernet or Wi-Fi. A valid login method is available. Back speakers are optional.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Start STB after factory reset",
+      "data": "",
+      "expectedResult": "The first onboarding screen is shown"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Pair Bluetooth remote by holding 7 and 9 at the same time for three seconds",
+      "data": "",
+      "expectedResult": "Remote pairing succeeds and 'Pörun tókst' is shown"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Continue after remote pairing",
+      "data": "",
+      "expectedResult": "Onboarding continues to update check or internet setup"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "If 'Uppfærsla myndbandlykils' appears, wait for update to complete",
+      "data": "",
+      "expectedResult": "Update completes successfully and onboarding continues"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Continue to internet setup",
+      "data": "",
+      "expectedResult": "STB checks internet connection"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Ethernet connection if network cable is connected",
+      "data": "",
+      "expectedResult": "Wired internet connection succeeds and onboarding continues"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Wi-Fi setup if Ethernet is not used",
+      "data": "",
+      "expectedResult": "Available Wi-Fi networks are listed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Refresh Wi-Fi list",
+      "data": "",
+      "expectedResult": "Wi-Fi list updates successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Wi-Fi network and choose Tengja",
+      "data": "",
+      "expectedResult": "Password entry screen is shown if required"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enter incorrect Wi-Fi password",
+      "data": "",
+      "expectedResult": "Error message is shown and user is returned to Wi-Fi list"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Wi-Fi network again and enter correct password",
+      "data": "",
+      "expectedResult": "'Tenging tókst!' is shown"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Continue to login screen",
+      "data": "",
+      "expectedResult": "Login screen is shown with Rafræn skilríki, Pörunarkóði and Auðkennisapp"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Log in using one valid login method",
+      "data": "Use one of: Rafræn skilríki, Pörunarkóði or Auðkennisapp",
+      "expectedResult": "Login succeeds"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Continue after successful login",
+      "data": "",
+      "expectedResult": "Profile screen is shown"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify back speaker pairing window if it appears",
+      "data": "",
+      "expectedResult": "User can continue without pairing if speakers are unavailable, or start pairing if speakers are available"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Skip back speaker pairing when speakers are unavailable",
+      "data": "",
+      "expectedResult": "Onboarding continues without blocking the user"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Pair back speakers when speakers are available",
+      "data": "Turn on available back speakers and choose pair",
+      "expectedResult": "Back speaker pairing completes within approximately one minute"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Complete onboarding",
+      "data": "",
+      "expectedResult": "User reaches the main Sjónvarp Símans home experience successfully"
+    }
+  ]
+}

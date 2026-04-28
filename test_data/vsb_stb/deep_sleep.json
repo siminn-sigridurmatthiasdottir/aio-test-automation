@@ -1,0 +1,113 @@
+{
+  "title": "VSB STB - Deep Sleep Longer-Duration Recovery",
+  "folderHierarchy": ["VSB E2E", "STB", "Recovery"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. User is logged into the Sjónvarp Símans experience. Internet connection is available. Remote is paired and responsive. Deep sleep or power saving behavior is available in the test environment. Playable content is available.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience is displayed",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Stillingar",
+      "data": "Press LEFT arrow on remote and navigate to Stillingar",
+      "expectedResult": "Settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Skjáhvíla or power saving settings",
+      "data": "",
+      "expectedResult": "Screensaver or power saving settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Deep sleep option is visible",
+      "data": "",
+      "expectedResult": "Deep sleep option is visible when supported by the test environment"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enable or confirm Deep sleep setting",
+      "data": "",
+      "expectedResult": "Deep sleep setting is enabled or confirmed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home screen",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Put STB into standby or deep sleep",
+      "data": "Use remote Power button or configured deep sleep method for the test environment",
+      "expectedResult": "STB enters standby or deep sleep state successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Leave STB in deep sleep for the configured test duration",
+      "data": "Use the duration defined for the test run, for example overnight or another agreed longer-duration interval",
+      "expectedResult": "STB remains in deep sleep or expected low-power state during the wait period"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wake STB from deep sleep",
+      "data": "Use remote Power button or configured wake method",
+      "expectedResult": "STB wakes successfully from deep sleep"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify HDMI output after deep sleep wake",
+      "data": "",
+      "expectedResult": "HDMI signal returns and startup, resume or Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify remote control after deep sleep wake",
+      "data": "",
+      "expectedResult": "Remote navigation works without re-pairing"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify internet connection after deep sleep wake",
+      "data": "",
+      "expectedResult": "STB reconnects to the internet successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify login/session state after deep sleep wake",
+      "data": "",
+      "expectedResult": "User remains logged in or is shown expected login/profile screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start live TV playback after deep sleep wake",
+      "data": "",
+      "expectedResult": "Live TV playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start VOD playback after deep sleep wake",
+      "data": "",
+      "expectedResult": "VOD playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify audio after deep sleep wake",
+      "data": "",
+      "expectedResult": "Audio plays correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home screen",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed and STB is stable after deep sleep recovery"
+    }
+  ]
+}

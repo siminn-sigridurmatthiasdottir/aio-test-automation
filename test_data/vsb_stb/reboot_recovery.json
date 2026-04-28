@@ -1,0 +1,131 @@
+{
+  "title": "VSB STB - Reboot, Standby and Recovery",
+  "folderHierarchy": ["VSB E2E", "STB", "Recovery"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. User is logged into the Sjónvarp Símans experience. Internet connection is available. Remote is paired and responsive.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience is displayed",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start live TV playback",
+      "data": "",
+      "expectedResult": "Live TV playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Press Home button",
+      "data": "",
+      "expectedResult": "User returns to Sjónvarp Símans home screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Restart STB",
+      "data": "Use configured restart option for the test environment",
+      "expectedResult": "STB restarts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait for STB to boot",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen or expected startup screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify internet reconnects after reboot",
+      "data": "",
+      "expectedResult": "STB has working internet connection"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify remote still works after reboot",
+      "data": "",
+      "expectedResult": "Remote navigation works without re-pairing"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify login/session state after reboot",
+      "data": "",
+      "expectedResult": "User remains logged in or is shown expected login/profile screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start live TV playback after reboot",
+      "data": "",
+      "expectedResult": "Live TV playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start VOD playback after reboot",
+      "data": "",
+      "expectedResult": "VOD playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify audio after reboot",
+      "data": "",
+      "expectedResult": "Audio plays correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home screen",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed and STB is stable after reboot"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Put STB into standby",
+      "data": "Use the configured standby method for the test environment, such as remote power button or system standby option",
+      "expectedResult": "STB enters standby state successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wake STB from standby",
+      "data": "Use the remote control or configured wake method",
+      "expectedResult": "STB wakes successfully from standby"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience after standby wake",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen or expected resume screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify internet connection after standby wake",
+      "data": "",
+      "expectedResult": "STB has working internet connection after waking from standby"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify remote still works after standby wake",
+      "data": "",
+      "expectedResult": "Remote navigation works without re-pairing"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start live TV playback after standby wake",
+      "data": "",
+      "expectedResult": "Live TV playback starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify audio after standby wake",
+      "data": "",
+      "expectedResult": "Audio plays correctly"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Sjónvarp Símans home screen",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed and STB is stable after reboot and standby recovery"
+    }
+  ]
+}

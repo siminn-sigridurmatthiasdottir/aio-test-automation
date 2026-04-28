@@ -1,0 +1,275 @@
+{
+  "title": "Sjónvarp Símans App - Settings - Functional Test",
+  "folderHierarchy": ["VSB E2E", "Sjónvarp Símans App", "Settings"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "User is logged into the Sjónvarp Símans experience and is on the Home screen.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Press LEFT arrow on remote",
+      "data": "",
+      "expectedResult": "Hamburger menu opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Navigate to Stillingar and open",
+      "data": "",
+      "expectedResult": "Settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Aðgangur",
+      "data": "",
+      "expectedResult": "Aðgangur screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Upplýsingar",
+      "data": "",
+      "expectedResult": "User account and subscription information is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Breyta notendum option",
+      "data": "",
+      "expectedResult": "User management option is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Stillingar",
+      "data": "",
+      "expectedResult": "Settings screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Útskrá",
+      "data": "",
+      "expectedResult": "User is logged out and returned to login screen"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Log in again",
+      "data": "",
+      "expectedResult": "User logs in successfully and returns to the Sjónvarp Símans experience"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Textun",
+      "data": "",
+      "expectedResult": "Subtitle settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enable subtitles",
+      "data": "",
+      "expectedResult": "Subtitles are enabled"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Change subtitle size",
+      "data": "",
+      "expectedResult": "Subtitle size setting is updated"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Enable text for hearing impaired",
+      "data": "",
+      "expectedResult": "Hearing impaired subtitles are enabled"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Disable subtitles",
+      "data": "",
+      "expectedResult": "Subtitles are disabled"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Stillingar",
+      "data": "",
+      "expectedResult": "Settings screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Skjáhvíla",
+      "data": "",
+      "expectedResult": "Screensaver settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Change screensaver timeout",
+      "data": "",
+      "expectedResult": "New timeout value is saved"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start screensaver manually",
+      "data": "",
+      "expectedResult": "Screensaver starts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify power saving options are visible",
+      "data": "Orkusparnaður, Deep sleep, Slökkva eftir 4 klst",
+      "expectedResult": "Power settings are visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Stillingar",
+      "data": "",
+      "expectedResult": "Settings screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Tækið",
+      "data": "",
+      "expectedResult": "Device settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open device information",
+      "data": "",
+      "expectedResult": "Device information is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle Spila næsta þátt sjálfkrafa",
+      "data": "",
+      "expectedResult": "Setting updates successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle Læsa YouTube með PIN",
+      "data": "",
+      "expectedResult": "Setting updates successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle CEC",
+      "data": "",
+      "expectedResult": "CEC setting updates successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle CEC standby control",
+      "data": "",
+      "expectedResult": "CEC standby control updates successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open skjáupplausn settings",
+      "data": "",
+      "expectedResult": "Resolution options are displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle Dolby ef mögulegt",
+      "data": "",
+      "expectedResult": "Dolby setting updates successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle Video Native Frame Rate for Netflix",
+      "data": "",
+      "expectedResult": "Setting updates successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle Ræsa í sjónvarpi",
+      "data": "",
+      "expectedResult": "Setting updates successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Endurhlaða viðmót",
+      "data": "",
+      "expectedResult": "UI reloads and the Sjónvarp Símans experience continues functioning"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Factory Reset option is visible but do not select",
+      "data": "",
+      "expectedResult": "Factory Reset option is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Stillingar",
+      "data": "",
+      "expectedResult": "Settings screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Hljóðkerfi",
+      "data": "",
+      "expectedResult": "Audio settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Change audio output to Sjónvarp",
+      "data": "",
+      "expectedResult": "Audio output switches successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Change audio output to Myndlykill",
+      "data": "",
+      "expectedResult": "Audio output switches successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Myndlykill og bakhátalarar",
+      "data": "",
+      "expectedResult": "Combined audio output option is selectable"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify þráðlausir bakhátalarar option",
+      "data": "",
+      "expectedResult": "Wireless speaker option is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Stillingar",
+      "data": "",
+      "expectedResult": "Settings screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Virkja tilboðskóða is visible",
+      "data": "",
+      "expectedResult": "Option is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Fá pörunarkóða is visible",
+      "data": "",
+      "expectedResult": "Option is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Fá pörunarkóða",
+      "data": "",
+      "expectedResult": "Pairing code is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Stillingar",
+      "data": "",
+      "expectedResult": "Settings screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Endurræsa option is visible but do not select",
+      "data": "",
+      "expectedResult": "Restart option is visible"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify Verkfræðingahornið is visible",
+      "data": "",
+      "expectedResult": "Engineer menu option is visible"
+    }
+  ]
+}

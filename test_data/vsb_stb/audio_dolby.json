@@ -1,0 +1,155 @@
+{
+  "title": "VSB STB - Audio, Dolby and Speaker Flow",
+  "folderHierarchy": ["VSB E2E", "STB", "Audio"],
+  "scriptType": {
+    "ID": 7,
+    "name": "Classic"
+  },
+  "precondition": "STB onboarding is completed. User is logged into the Sjónvarp Símans experience. Internet connection is available. Audio playback content is available. Dolby-supported content is available if Dolby validation is part of the test run. Back speakers are available if speaker pairing is part of the test run.",
+  "steps": [
+    {
+      "stepType": "TEXT",
+      "step": "Verify Sjónvarp Símans home experience is displayed",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start content playback",
+      "data": "",
+      "expectedResult": "Video playback starts successfully with audio"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify audio through current output",
+      "data": "",
+      "expectedResult": "Audio is heard clearly from the currently selected audio output"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Stillingar",
+      "data": "Press LEFT arrow on remote and navigate to Stillingar",
+      "expectedResult": "Settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Hljóðkerfi",
+      "data": "",
+      "expectedResult": "Audio settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Change audio output to Sjónvarp",
+      "data": "",
+      "expectedResult": "Audio output switches to TV successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start or resume playback",
+      "data": "",
+      "expectedResult": "Playback works and audio is heard through TV output"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Hljóðkerfi",
+      "data": "",
+      "expectedResult": "Audio settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Change audio output to Myndlykill",
+      "data": "",
+      "expectedResult": "Audio output switches to STB successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start or resume playback",
+      "data": "",
+      "expectedResult": "Playback works and audio is heard through STB output"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Return to Hljóðkerfi",
+      "data": "",
+      "expectedResult": "Audio settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Select Myndlykill og bakhátalarar if supported",
+      "data": "",
+      "expectedResult": "Combined STB and back speaker audio output option is selected when supported"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify þráðlausir bakhátalarar option if supported",
+      "data": "",
+      "expectedResult": "Wireless back speaker option is visible when supported by the test environment"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Pair wireless back speakers if available",
+      "data": "Turn on back speakers and start pairing",
+      "expectedResult": "Back speakers pair successfully when available"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start or resume playback with back speakers if paired",
+      "data": "",
+      "expectedResult": "Playback works and audio is heard from the expected speakers"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Open Tækið settings",
+      "data": "",
+      "expectedResult": "Device settings screen opens"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle Dolby ef mögulegt if supported",
+      "data": "",
+      "expectedResult": "Dolby setting updates successfully when supported"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start Dolby-supported content if available",
+      "data": "",
+      "expectedResult": "Dolby-supported content starts successfully and audio output follows the expected Dolby configuration for the test environment"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Toggle Dolby ef mögulegt back to original value if changed",
+      "data": "",
+      "expectedResult": "Dolby setting is restored to original value"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Restart STB",
+      "data": "Use configured restart option for the test environment",
+      "expectedResult": "STB restarts successfully"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Wait for STB to boot",
+      "data": "",
+      "expectedResult": "Sjónvarp Símans home screen or expected startup screen is displayed"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify audio settings after reboot",
+      "data": "",
+      "expectedResult": "Configured audio settings persist or return to expected default"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Verify back speakers after reboot if paired",
+      "data": "",
+      "expectedResult": "Back speakers reconnect automatically or are available for reconnection"
+    },
+    {
+      "stepType": "TEXT",
+      "step": "Start playback after reboot",
+      "data": "",
+      "expectedResult": "Playback starts successfully and audio works"
+    }
+  ]
+}
