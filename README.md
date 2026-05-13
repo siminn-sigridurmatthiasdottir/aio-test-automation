@@ -1,81 +1,93 @@
-# AIO Test Automation Pilot
+# AIO Reports CLI
 
-This project creates AIO Tests test cases using the AIO REST API, specifically for STB (Set-Top Box) end-to-end testing scenarios.
+Small Python CLI tool for generating AIO test cycle reports.
 
-## Current Status
+## Features
 
-Working proof of concept for automated test case creation:
-
-- **Project**: TVSYSTEMS
-- **Script type**: Classic (ID: 7)
-- **Tool**: Python with requests library
-- **Environment**: Cross-platform Python script
-
-## Project Structure
-
-- `create_test.py` - Main Python script that creates test cases in AIO
-- `requirements.txt` - Python dependencies (requests, python-dotenv, etc.)
-- `.env` - Environment file for AIO API token (not committed)
-- `venv/` - Python virtual environment
-- `test_data/` - Directory for test data files (currently empty)
-- `AIO_API_GUIDELINES.md` - Comprehensive API usage rules and best practices
-- `.gitignore` - Git ignore rules (excludes .env, venv, __pycache__)
+- Pulls executed cycle data from AIO API
+- Generates JSON and Markdown reports
+- Stores reports in `reports/<report-name>/`
+- Supports pagination for cycle test cases
+- Calculates summary metrics:
+  - total
+  - executed
+  - passed
+  - failed
+  - blocked
+  - in progress
+  - not run
+  - pass rate based on executed cases
 
 ## Setup
 
-1. **Clone and navigate to the project**:
-   ```bash
-   cd aio-test-project
-   ```
-
-2. **Activate the virtual environment**:
-   ```bash
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure your AIO token**:
-   - Create a `.env` file in the project root
-   - Add your AIO API token:
-     ```
-     AIO_TOKEN=your_aio_token_here
-     ```
-
-## Usage
-
-Run the script to create a new test case:
+1. Create and activate your virtual environment.
+2. Install dependencies:
 
 ```bash
-python create_test.py
+pip install -r requirements.txt
 ```
 
-The script will:
-1. Create/retrieve the folder structure: `STB E2E` → `Remote`  
-2. Create a test case with preconditions and test steps
-3. Output the created test case key and folder information
+3. Copy `.env.example` to `.env` and set your token:
 
-## What It Creates
+```env
+AIO_TOKEN=your_aio_token_here
+AIO_PROJECT_KEY=TVSYSTEMS
+```
 
-**Test Case**: "STB E2E - Pair remote (API test)"
-- **Precondition**: STB is factory reset. Remote has batteries.
-- **Steps**:
-  1. Power on the STB → Setup screen is shown
-  2. Start pairing → Remote is detected  
-  3. Confirm pairing → Remote works
+Notes:
+- `AIO_TOKEN` is required.
+- API keys are read from environment variables only.
 
-## Security
+## Run
 
-- API tokens are stored in `.env` (git-ignored)
-- Follow security guidelines in `AIO_API_GUIDELINES.md`
-- Never commit secrets or tokens to version control
+Main command:
 
-## Dependencies
+```bash
+python -m aio_reports.cli --cycle TVSYSTEMS-CY-21
+```
 
-- Python 3.14+
-- requests 2.33.1
-- python-dotenv 1.2.2
-- Additional dependencies listed in `requirements.txt`
+Compatibility command:
+
+```bash
+python generate_cycle_report.py --cycle TVSYSTEMS-CY-21
+```
+
+Optional flags:
+
+- `--test-name` (overrides the derived report name)
+- `--project` (default: `TVSYSTEMS`)
+- `--output-dir` (default: `reports`)
+
+Required flags:
+
+- `--cycle`
+
+Report name source:
+
+- `--test-name` if provided
+- otherwise the AIO cycle title
+- otherwise the cycle key
+
+Report name sanitization:
+
+- converted to lowercase
+- spaces become `-`
+- unsafe characters are removed
+
+## Expected Output
+
+If the cycle title is `Web E2E`, the derived report name becomes `web-e2e` and the output paths are:
+
+- `reports/web-e2e/web-e2e_report.json`
+- `reports/web-e2e/web-e2e_report.md`
+
+Custom root output directory:
+
+```bash
+python -m aio_reports.cli --cycle TVSYSTEMS-CY-21 --output-dir output
+```
+
+If the derived report name is `web-e2e`, this writes:
+
+- `output/web-e2e/web-e2e_report.json`
+- `output/web-e2e/web-e2e_report.md`
