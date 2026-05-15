@@ -7,36 +7,78 @@ def escape_markdown_cell(value: str) -> str:
 
 def to_markdown(report: Dict[str, Any]) -> str:
     lines = []
-    lines.append(f"# AIO Test Report: {report['testName']}")
+    lines.append("# AIO Test Execution Report")
+    lines.append("")
+    lines.append("## Execution Summary")
     lines.append("")
     lines.append(f"- Project: {report['projectKey']}")
     lines.append(f"- Test/report name: {report['testName']}")
     lines.append(f"- Cycle key: {report['cycleKey']}")
     lines.append(f"- Cycle title: {report['cycleTitle']}")
     lines.append(f"- Generated at: {report['generatedAt']}")
-    lines.append("")
 
     summary = report["summary"]
-    lines.append("## Summary")
-    lines.append("")
     lines.append(f"- Total cases: {summary['totalCases']}")
-    lines.append(f"- Executed cases: {summary['executedCases']}")
-    lines.append(f"- Passed: {summary['passed']}")
-    lines.append(f"- Failed: {summary['failed']}")
-    lines.append(f"- Blocked: {summary['blocked']}")
-    lines.append(f"- In Progress: {summary['inProgress']}")
-    lines.append(f"- Not Run: {summary['notRun']}")
-    lines.append(f"- Pass rate (executed): {summary['passRateExecuted']}%")
+    lines.append(f"- Run status Passed: {summary['runStatusPassed']}")
+    lines.append(f"- Test cases with step failures: {summary['testCasesWithStepFailures']}")
+    lines.append(f"- Failed steps: {summary['failedSteps']}")
+    lines.append(f"- Passed steps: {summary['passedSteps']}")
+    lines.append(f"- Total executed steps: {summary['totalExecutedSteps']}")
+    lines.append(f"- Warnings: {summary['warnings']}")
     lines.append("")
 
-    lines.append("## Cases")
+    lines.append("## What Was Tested")
     lines.append("")
-    lines.append("| Case Key | Title | Latest Status |")
-    lines.append("|---|---|---|")
-    for row in report["cases"]:
-        key = row.get("caseKey") or "-"
-        title = escape_markdown_cell(row.get("caseTitle") or "-")
-        status = row.get("status") or "-"
-        lines.append(f"| {key} | {title} | {status} |")
+    for summary_line in report.get("whatWasTested", []):
+        lines.append(f"- {summary_line}")
+    if not report.get("whatWasTested"):
+        lines.append("- No executed test scope available.")
+    lines.append("")
+
+    lines.append("## Execution Notes")
+    lines.append("")
+    for note in report.get("executionNotes", []):
+        lines.append(f"- {escape_markdown_cell(note)}")
+    if not report.get("executionNotes"):
+        lines.append("- No execution notes recorded.")
+    lines.append("")
+
+    lines.append("## Test Case Results")
+    lines.append("")
+    for execution in report.get("executions", []):
+        run = execution.get("run") or {}
+        lines.append(f"### {execution.get('caseKey') or '-'}")
+        lines.append("")
+        lines.append(f"- Title: {escape_markdown_cell(execution.get('caseTitle') or '-')}")
+        lines.append(f"- Selected run: {run.get('runId') or '-'}")
+        lines.append(f"- Run status: {run.get('status') or '-'}")
+        lines.append(f"- Selection reason: {execution.get('selectionReason') or '-'}")
+        lines.append(f"- Executed by: {run.get('executedByID') or '-'}")
+        lines.append(f"- Created date: {run.get('createdDate') or '-'}")
+        lines.append(f"- Updated date: {run.get('updatedDate') or '-'}")
+        lines.append(f"- Effort: {run.get('effort') or '-'}")
+        lines.append(f"- Defects: {', '.join(run.get('jiraDefectIDs') or []) or '-'}")
+
+        if execution.get("inconsistencies"):
+            lines.append("- Inconsistencies:")
+            for inconsistency in execution["inconsistencies"]:
+                lines.append(f"  - {escape_markdown_cell(inconsistency)}")
+
+        lines.append("")
+        lines.append("Steps:")
+        for step in execution.get("steps", []):
+            lines.append(
+                f"- {step.get('stepOrder', '-')} | {escape_markdown_cell(step.get('step') or '-')} | {step.get('status') or '-'}"
+            )
+            lines.append(
+                f"  Expected: {escape_markdown_cell(step.get('expectedResult') or '-')}"
+            )
+            if step.get("actualResult"):
+                lines.append(
+                    f"  Actual: {escape_markdown_cell(step.get('actualResult') or '-') }"
+                )
+        if not execution.get("steps"):
+            lines.append("- No step execution details available.")
+        lines.append("")
 
     return "\n".join(lines) + "\n"

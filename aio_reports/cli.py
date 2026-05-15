@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 from aio_reports.aio_client import AioClient
 from aio_reports.markdown import to_markdown
-from aio_reports.report_builder import build_report_payload
+from aio_reports.report_builder import build_report_payload, select_relevant_run
 from aio_reports.storage import build_report_paths, write_json, write_text
 
 
@@ -66,9 +66,18 @@ def main() -> None:
     )
 
     cycle_detail = client.fetch_cycle_detail(args.cycle)
-    case_items = client.fetch_cycle_cases(args.cycle)
+    cycle_run_items = client.fetch_cycle_test_runs(args.cycle)
     cycle_title = cycle_detail.get("title", args.cycle)
     report_name_source = derive_report_name(args.test_name, cycle_title, args.cycle)
+
+    run_details = {}
+    for run_item in cycle_run_items:
+        selection = select_relevant_run(run_item.get("runs") or [])
+        selected_run = selection.get("selectedRun")
+        if selected_run and selected_run.get("ID") is not None:
+            run_id = selected_run["ID"]
+            if run_id not in run_details:
+                run_details[run_id] = client.fetch_test_run_detail(args.cycle, run_id)
 
     safe_test_name, json_path, md_path = build_report_paths(
         output_dir=args.output_dir,
@@ -80,7 +89,8 @@ def main() -> None:
         test_name=safe_test_name,
         cycle_key=args.cycle,
         cycle_title=cycle_title,
-        case_items=case_items,
+        cycle_run_items=cycle_run_items,
+        run_details=run_details,
     )
 
     write_json(json_path, report)

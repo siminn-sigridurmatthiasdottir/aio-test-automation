@@ -22,14 +22,14 @@ class AioClient:
     def fetch_cycle_detail(self, cycle_key: str) -> Dict[str, Any]:
         return self._get(f"/testcycle/{cycle_key}/detail")
 
-    def fetch_cycle_cases(self, cycle_key: str) -> List[Dict[str, Any]]:
+    def fetch_cycle_test_runs(self, cycle_key: str) -> List[Dict[str, Any]]:
         items: List[Dict[str, Any]] = []
         start_at = 0
         page_size = 100
 
         while True:
             page = self._get(
-                f"/testcycle/{cycle_key}/testcase",
+                f"/testcycle/{cycle_key}/testrun",
                 params={"startAt": start_at, "maxResults": page_size},
             )
             page_items = page.get("items", [])
@@ -41,3 +41,6 @@ class AioClient:
             start_at += len(page_items)
 
         return items
+
+    def fetch_test_run_detail(self, cycle_key: str, run_id: int) -> Dict[str, Any]:
+        return self._get(f"/testcycle/{cycle_key}/testrun/{run_id}")
